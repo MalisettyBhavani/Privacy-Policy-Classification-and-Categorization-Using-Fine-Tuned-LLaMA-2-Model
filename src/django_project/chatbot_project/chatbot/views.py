@@ -30,7 +30,7 @@ def llm_response(input_text):
     prompt = prompt + input_text
 
     tokenizer = AutoTokenizer.from_pretrained('/home/bhavani/GA Work/Fine_Tuning_and_ChatBot_Creation/src/FineTuning_11/my-llama2-chat-hf-llm')
-    model = AutoModelForSequenceClassification.from_pretrained('/home/bhavani/GA Work/Fine_Tuning_and_ChatBot_Creation/src/FineTuning_11/my-llama2-chat-hf-llm')
+    model = AutoModelForSequenceClassification.from_pretrained('/home/bhavani/GA Work/Fine_Tuning_and_ChatBot_Creation/src/FineTuning_11/my-llama2-chat-hf-llm', num_labels = 10)
     sentences = nltk.sent_tokenize(input_text)
     categories = [
         'First Party Collection/Use', 'Third Party Sharing/Collection', 'Other',
